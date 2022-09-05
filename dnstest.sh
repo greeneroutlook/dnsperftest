@@ -8,19 +8,23 @@ command -v bc > /dev/null || { echo "error: bc was not found. Please install bc.
 NAMESERVERS=$(grep ^nameserver /etc/resolv.conf | cut -d " " -f 2 | sed 's/\(.*\)/&#&/')
 
 PROVIDERSV4="
-1.1.1.3#cloudflare 
-4.2.2.1#level3
+1.1.1.3#cloudflare
 8.8.8.8#google
 9.9.9.9#quad9
-80.80.80.80#freenom
 208.67.222.123#opendns
 199.85.126.20#norton
 185.228.168.168#cleanbrowsing
-77.88.8.7#yandex
-176.103.130.132#adguard
 156.154.70.3#neustar
-8.26.56.26#comodo
+8.26.56.26#comodo-nuse
 45.90.28.202#nextdns
+203.12.160.35#tpg
+139.130.4.4#telstra
+211.31.132.28#microplex
+204.97.212.10#sprintlink
+203.2.193.67#verizon
+76.76.2.0#controld
+103.247.36.36#dnsfilter
+195.46.39.39#safedns
 "
 
 PROVIDERSV6="
@@ -29,8 +33,6 @@ PROVIDERSV6="
 2620:fe::fe#quad9-v6
 2620:119:35::35#opendns-v6
 2a0d:2a00:1::1#cleanbrowsing-v6
-2a02:6b8::feed:0ff#yandex-v6
-2a00:5a60::ad1:0ff#adguard-v6
 2610:a1:1018::3#neustar-v6
 "
 
@@ -61,8 +63,8 @@ else
 fi
 
 
-# Domains to test. Duplicated domains are ok
-DOMAINS2TEST="www.google.com amazon.com facebook.com www.youtube.com www.reddit.com wikipedia.org twitter.com gmail.com www.google.com whatsapp.com"
+# Domains to test. Duplicated domains are ok. Selection of domains fromz: https://www.similarweb.com/top-websites/australia/
+DOMAINS2TEST="google.com.au ozbargain.com.au abc.net.au ebay.com.au www.reddit.com realestate.com.au amazon.com.au my.gov.au bom.gov.au bunnings.com.au"
 
 
 totaldomains=0
