@@ -41,7 +41,7 @@ For macOS using homebrew:
 # Utilization
 
 ``` 
- $ git clone --depth=1 https://github.com/greeneroutlook/dnsperftest/
+ $ git clone --depth=1 https://github.com/greeneroutlook/dnsperftest/ --branch resolveAU
  $ cd dnsperftest
  $ bash ./dnstest.sh 
 DNS Name / Tests >   1       2       3       4       5       6       7       8       9       10      Average	IP Address
